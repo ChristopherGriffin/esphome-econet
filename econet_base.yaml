@@ -5,10 +5,8 @@ substitutions:
   device_description: "Rheem Device"
   tx_pin: GPIO19
   rx_pin: GPIO22
-  platform: esp32
-  board: esp32dev
-  variant: esp32
-  framework: arduino
+  platform: esp8266
+  board: d1_mini
   github_ref: main
   external_components_source: github://esphome-econet/esphome-econet@${github_ref}
   logger_level: WARN
@@ -26,9 +24,7 @@ esphome:
     version: v2.5.0
 ${platform}:
   board: ${board}
-  variant: ${variant}
-  framework:
-    type: ${framework}
+  
 preferences:
   flash_write_interval: "24h"
 wifi:
